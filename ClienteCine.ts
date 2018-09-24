@@ -17,6 +17,7 @@ export class ClienteCine{ //informaçoes do cliente
         
     }
 
+
     public getTelefone():string{
         return this.telefone;
     }

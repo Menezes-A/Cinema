@@ -1,23 +1,28 @@
-declare function require (msg:string): any;
+declare function require (msg:string): any; //padrão
 var readline= require('readline-sync');
 
-import { ClienteCine  } from "./ClienteCine";
-
-let cliente: ClienteCine = new ClienteCine(); //novo objeto  
+import {Controlador} from "./Controlador"
 let menu: boolean = true;
-while (menu){
-    console.log("\n Menu: \n Cadastro do Cliente = 1 \n Cadastro da sala= 2 \n");
+while(menu){
+    console.log("\n Menu: \n Reservar cadeira");
     let comandos: string = (readline.question("Digite o comando: \n ")); 
-    switch (comandos){
-        case "1":
-            let id: string= (readline.question("Digite o id: "));
-            let telefone: string = (readline.question("Digite o telefone: "));
-           
+    switch(comandos){
+         
+        case "reservar":
+            let novoId: string = readline.question("digite o ID:");
+            let novoFone: string = readline.question("digite o Fone:");
+            let lugar: number = parseInt(readline.question("digite o assento desejado:"));
+            
+            if( this.controlador.reservar(novoId,novoFone,lugar) == true){ //deu certo
+                console.log("ok");
+            }else{
+                console.log("erro");
+            }
+            break;
 
-        case "2":
-        let cadeira: string = (readline.question("Digite o numero de cadeiras vagas: "));
-
-        case "parar":
-            menu=false;
+            break;
+        default:
+            console.log("opcao inexistente");
             break;
     }
+}

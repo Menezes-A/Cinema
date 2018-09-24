@@ -9,7 +9,6 @@ export class SalaCine{
         this.lotacao = lotacao;
         this.cadeira = [];
     }
-    
 
     public status(): string{
         let res: string="[ ";
