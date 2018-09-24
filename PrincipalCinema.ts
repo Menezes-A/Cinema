@@ -4,11 +4,11 @@ var readline= require('readline-sync');
 import {Controlador} from "./Controlador"
 let menu: boolean = true;
 while(menu){
-    console.log("\n Menu: \n Reservar cadeira");
+    console.log("\n Menu: \n Reservar cadeira: 1  \n Cadastrar sala: 2");
     let comandos: string = (readline.question("Digite o comando: \n ")); 
     switch(comandos){
          
-        case "reservar":
+        case "1":
             let novoId: string = readline.question("digite o ID:");
             let novoFone: string = readline.question("digite o Fone:");
             let lugar: number = parseInt(readline.question("digite o assento desejado:"));
@@ -21,6 +21,12 @@ while(menu){
             break;
 
             break;
+
+            case "2":
+            let cadeira : string[] = readline.question("digite a quatidade de cadeiras:");
+            break;
+
+
         default:
             console.log("opcao inexistente");
             break;
