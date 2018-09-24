@@ -1,21 +1,20 @@
 export class ClienteCine{ //informaçoes do cliente 
-    private id:number; 
+    private id:string; 
     private telefone:string;
     private lugar:number;
     
-    public constructor(id:number,telefone:string,lugar:number){
+    public constructor(id:string,telefone:string,lugar:number){
         this.id = id;
         this.telefone = telefone;
         this.lugar = lugar;
     }
 
-    public getId():number{ //pegar o numero do id que a pessoa vai digitar
+    public getId():string{ //pegar o numero do id que a pessoa vai digitar
         return this.id;
     }
-    public setId(id:number):void{
-        if(id>0){  // id não tem q ser maior q 0
+    public setId(id:string):void{
             this.id = id;
-        }
+        
     }
 
     public getTelefone():string{

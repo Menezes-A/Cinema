@@ -26,7 +26,7 @@ export class SalaCine{
     return res;
     }
 
-    public reservar(id: number, telefone: string, cadeira: number): boolean{ 
+    public reservar(id: string, telefone: string, cadeira: number): boolean{ 
         if(this.cadeira[cadeira] != undefined){
             return false;
         }
