@@ -31,16 +31,10 @@ export class ClienteCine{ //informaçoes do cliente a
     public getCadeira(): number{
         return this.cadeira;
     }
+    
     public setCadeira(cadeira: number): void{
         if(cadeira >= 0){
             this.cadeira = cadeira;
         }
-    }
-
-
-    public toString(): string{
-        return  "Seu Id: " + this.id + "\n" +
-                "Seu Telefone: " + this.telefone + "\n"  +
-                "Sua Poltrona: " + this.cadeira + "\n";
     }
 }
